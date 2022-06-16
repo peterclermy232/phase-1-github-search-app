@@ -1,4 +1,5 @@
-
+ renderResponse(json))
+    fetch(`https://api.github.com/users/${name}/repos`, c
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#github-form").addEventListener("submit", (e) => {
       e.preventDefault(); 

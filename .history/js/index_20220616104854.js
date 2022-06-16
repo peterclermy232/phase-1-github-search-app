@@ -1,4 +1,21 @@
+ renderResponse(json))
+    fetch(`https://api.github.com/users/${name}/repos`, configurationObject).then(respone => respone.json()).then(json => renderRepos(json))
 
+}
+
+function renderRepos(json) {
+    for (const repo of json) {
+        const repoName = repo.name
+        const url = repo.headingElement
+        const a = document.createElement("a")
+        a.href = url
+        a.innerText = repoName
+        const div = document.createElement("div")
+        div.append(a)
+        document.getElementById("repos-list").append(div)
+    }
+}
+*/
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#github-form").addEventListener("submit", (e) => {
       e.preventDefault(); 
